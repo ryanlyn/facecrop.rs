@@ -4,9 +4,9 @@
 
 ## About 
 
-FaceCrop is a CLI tool for extracting crops of all faces within a given image or directory of images. It supports image formats including `.png` and `.jpeg`/`.jpg`. The crops are calculated based on the face bounding box and can be either absolute (pixels) or relative to the face size (proportion of the face height to crop). Each crop is then optionally resized to the given size and/or filtered out.
+FaceCrop is a CLI tool I wrote originally to extract crops of all faces within directory of images for stable diffusion training. I've generated out this README in case for posterity. 
 
-*I originally wrote this to generate training images of human photos for stable diffusion.*
+The crops are calculated based on the face bounding box and can be either absolute (pixels) or relative to the face size (proportion of the face height to crop). Each crop is then optionally resized to the given size and/or filtered out.
 
 ## Features
 
@@ -93,7 +93,7 @@ facecrop ./images ./output \
 
 ## Installation
 
-To install FaceCrop, you need to have Rust installed on your machine. Once you have Rust installed, you can clone this repository and build the project using cargo build --release.
+To install FaceCrop, you need to have Rust installed on your machine. Once you have Rust installed, you can clone this repository and build the project using `cargo build --release`.
 
 ## Contributing
 
