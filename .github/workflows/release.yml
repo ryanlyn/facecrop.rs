@@ -5,6 +5,9 @@ on:
     tags:
       - '*'
 
+env:
+  CARGO_TERM_COLOR: always
+
 jobs:
   build:
     name: Release
@@ -15,17 +18,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install Rust
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: stable
-        target: ${{ matrix.target }}
-        override: true
-
-    - name: Install dependencies
-      run: sudo apt-get install -y gcc-aarch64-linux-gnu gcc-x86-64-linux-gnu
+      uses: actions/checkout@v3
 
     - name: Build Release
       uses: actions-rs/cargo@v1
