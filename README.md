@@ -4,7 +4,7 @@
 
 ## About 
 
-FaceCrop is a CLI tool I originally wrote to extract crops of all faces within directory of images for stable diffusion training. I've generated out this README in case for posterity. 
+FaceCrop is a CLI tool I originally wrote to extract crops of all faces within directory of images for stable diffusion training. I've generated out this README for posterity. 
 
 The crops are calculated based on the face bounding box and can be either absolute (pixels) or relative to the face size (proportion of the face height to crop). Each crop is then optionally resized to the given size and/or filtered out.
 
@@ -77,7 +77,7 @@ facecrop ./images ./output \
     --height 1024 \
     --width 1024 \
     --resize \
-    --filter_by_size \
+    --filter_by_size
 ```
 
 #### Crop by Pixels
@@ -88,7 +88,7 @@ facecrop ./images ./output \
     --top_padding 0.1 \
     --height 1024 \
     --width 1024 \
-    --filter_by_size \
+    --filter_by_size
 ```
 
 ## Installation
