@@ -6,11 +6,16 @@ on:
   pull_request:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
   build:
+    timeout-minutes: 30
 
     runs-on: ubuntu-latest
 
